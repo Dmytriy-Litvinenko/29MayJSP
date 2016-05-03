@@ -8,9 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class JspController {
-    @RequestMapping("/")
+    @RequestMapping("/hi")
     public ModelAndView hi(){
         ModelAndView modelAndView = new ModelAndView("hi");
+        modelAndView.addObject("name","Dima");
+        return modelAndView;
+    }
+
+    @RequestMapping("/")
+    public ModelAndView home(){
+        ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("name","Dima");
         return modelAndView;
     }
